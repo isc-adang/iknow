@@ -37,6 +37,7 @@ jobs:
           key: ${{ github.job }}-run-${{ github.run_number }}
           restore-keys: ${{ github.job }}-run-
           path: |
+            ${{ env.ICUDIR }}
             ~/ccache
             ~/pipcache
       - name: build
@@ -64,6 +65,7 @@ jobs:
           key: ${{ github.job }}-run-${{ github.run_number }}
           restore-keys: ${{ github.job }}-run-
           path: |
+            ${{ env.ICUDIR }}
             ~/ccache
             ~/pipcache
       - name: install dependencies
@@ -93,6 +95,7 @@ jobs:
           key: ${{ github.job }}-run-${{ github.run_number }}
           restore-keys: ${{ github.job }}-run-
           path: |
+            ${{ env.ICUDIR }}
             ~/ccache
             ~/pipcache
       - name: install dependencies
