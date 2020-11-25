@@ -20,6 +20,7 @@ on:
 
 env:
   ICUDIR: ${{ github.workspace }}/thirdparty/icu
+  COMMIT_RANGE: ${{ join(github.event.commits.*.id, ' ') }}  # todo remove
 
 jobs:
   manylinux2010_x86_64:
@@ -206,11 +207,12 @@ jobs:
     env:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
       TESTPYPI_TOKEN: ${{ secrets.TESTPYPI_TOKEN }}
+      COMMIT_RANGE: ${{ join(github.event.commits.*.id, ' ') }}
     steps:
       - name: check out repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 2
+          fetch-depth: 21  # github.event.commits has limit of 20 commits, so we need at least 21 to perform diffs
       - name: download cached pip files
         uses: actions/cache@v2
         with:
@@ -223,10 +225,21 @@ jobs:
           path: ~/wheels
       - name: deploy if appropriate
         run: .github/workflows/deploy.sh
-      - name: check iknowpy project size
+      - name: warn if version.py was changed but not in last commit
+        if: env.WARN_COMMIT
+        uses: peter-evans/commit-comment@v1
+        with:
+          sha: ${{ env.WARN_COMMIT }}
+          body: >-
+            **Warning:** The version bump must be part of the final commit in a
+            push to the master branch in order to trigger deployment. This is by
+            design because we do not want changes that were made after a version
+            bump to affect the new release. The final commit in the push was
+            ${{ env.WARN_COMMIT }}, so deployment was not triggered.
+      - name: check PyPI project size
         if: env.DEPLOY_OCCURRED == '1'
         run: ${{ github.workspace }}/.github/workflows/check_pypi_limit.py ${{ secrets.GITHUB_TOKEN }}
-      - name: create issue
+      - name: create issue if PyPI project size is near limit
         if: env.DEPLOY_OCCURRED == '1' && env.CREATE_ISSUE == '1'
         uses: peter-evans/create-issue-from-file@v2
         with:
