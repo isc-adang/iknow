@@ -99,7 +99,8 @@ else:
     current_versions = vars['PYVERSIONS_OSX'].split()
     
     # pyenv encounters error when installing version 3.6.15
-    ignored_versions = ('3.6.15',)
+    ignored_versions = ()
+    # ignored_versions = ('3.6.15',)
 
 # Get list of available Python versions.
 if platform == 'win64':
