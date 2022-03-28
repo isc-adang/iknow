@@ -4,7 +4,6 @@
 
 set -euxo pipefail
 
-
 # If you add a variable to or remove a variable from the dependency-autoupdate
 # section manually, you may also need to edit the EXPECTED_VARNAMES dictionary
 # in actions/updatelib.py.
