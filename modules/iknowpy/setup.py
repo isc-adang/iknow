@@ -781,11 +781,16 @@ try:
 
         # include git revision in distribution
         with open('iknowpy/git_revision', 'w') as f:
-            subprocess.run(
-                ['git', 'rev-parse', 'HEAD'],
-                stdout=f, stderr=subprocess.PIPE, universal_newlines=True,
-                check=True
-            )
+            try:
+                subprocess.run(
+                    ['git', 'rev-parse', 'HEAD'],
+                    stdout=f, stderr=subprocess.PIPE, universal_newlines=True,
+                    check=True
+                )
+            except subprocess.CalledProcessError as ex:
+                print(ex.stdout)
+                print(ex.stderr)
+                raise
         package_data = {'iknowpy': ['git_revision']}
     setup(
         name='iknowpy',
