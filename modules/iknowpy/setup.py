@@ -788,8 +788,10 @@ try:
                     check=True
                 )
             except subprocess.CalledProcessError as ex:
-                print(ex.stdout)
-                print(ex.stderr)
+                if ex.stdout:
+                    print(ex.stdout)
+                if ex.stderr:
+                    print(ex.stderr)
                 raise
         package_data = {'iknowpy': ['git_revision']}
     setup(
