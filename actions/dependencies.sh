@@ -10,19 +10,19 @@ set -euxo pipefail
 # in actions/updatelib.py.
 
 # START DEPENDENCY-AUTOUPDATE SECTION
-ICU_NAME="ICU 71.1"
-ICU_URL_WIN=https://github.com/unicode-org/icu/releases/download/release-71-1/icu4c-71_1-Win64-MSVC2019.zip
-ICU_URL_SRC=https://github.com/unicode-org/icu/releases/download/release-71-1/icu4c-71_1-src.tgz
-JSON_VERSION=3.11.2
-JSON_URL=https://github.com/nlohmann/json/releases/download/v3.11.2/include.zip
-PYVERSIONS_WIN="3.6.8 3.7.9 3.8.10 3.9.13 3.10.8"
-PYVERSIONS_OSX="3.6.15 3.7.14 3.8.14 3.9.14 3.10.7"
-PYVERSIONS_MACOSUNIVERSAL="3.8.10 3.9.13 3.10.8"
-PYURLS_MACOSUNIVERSAL="https://www.python.org/ftp/python/3.8.10/python-3.8.10-macos11.pkg https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg https://www.python.org/ftp/python/3.10.8/python-3.10.8-macos11.pkg"
+ICU_NAME="ICU 70.1"
+ICU_URL_WIN=https://github.com/unicode-org/icu/releases/download/release-70-1/icu4c-70_1-Win64-MSVC2019.zip
+ICU_URL_SRC=https://github.com/unicode-org/icu/releases/download/release-70-1/icu4c-70_1-src.tgz
+JSON_VERSION=3.11.1
+JSON_URL=https://github.com/nlohmann/json/releases/download/v3.11.1/include.zip
+PYVERSIONS_WIN="3.6.7 3.7.9 3.8.10 3.9.13 3.10.8"
+PYVERSIONS_OSX="3.6.14 3.7.14 3.8.14 3.9.14 3.10.7"
+PYVERSIONS_MACOSUNIVERSAL="3.8.10 3.9.12 3.10.8"
+PYURLS_MACOSUNIVERSAL="https://www.python.org/ftp/python/3.8.10/python-3.8.10-macos11.pkg https://www.python.org/ftp/python/3.9.12/python-3.9.12-macos11.pkg https://www.python.org/ftp/python/3.10.8/python-3.10.8-macos11.pkg"
 BUILDCACHE_NAME="Release v0.27.6"
 BUILDCACHE_URL_WIN=https://github.com/mbitsnbites/buildcache/releases/download/v0.27.6/buildcache-windows.zip
-CYTHON_VERSION=0.29.32
-MANYLINUX2014_X86_64_TAG=2022-10-16-620fa8d
+CYTHON_VERSION=0.29.31
+MANYLINUX2014_X86_64_TAG=2022-10-15-9332546
 MANYLINUX2014_AARCH64_TAG=2022-10-16-620fa8d
 MANYLINUX2014_PPC64LE_TAG=2022-10-16-620fa8d
 # END DEPENDENCY-AUTOUPDATE SECTION
