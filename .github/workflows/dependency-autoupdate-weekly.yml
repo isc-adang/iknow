@@ -35,6 +35,7 @@ jobs:
         if: github.event_name != 'schedule' && github.event.inputs.BUILD_PULL_REQUEST == 'false'
         run: echo "ACTIONS_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
       - name: apply update
+        id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
           assignees: isc-adang
@@ -52,3 +53,10 @@ jobs:
             For details regarding manylinux images, see https://github.com/pypa/manylinux.
 
             *I am a bot, and this action was performed automatically.*
+      - name: enable automerge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ env.ACTIONS_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: rebase
