@@ -54,7 +54,7 @@ for PYVERSION in $PYVERSIONS; do
   "$PYTHON" setup.py bdist_wheel --no-dependencies
 done
 "$PYTHON" setup.py merge --no-dependencies
-"$PYTHON" -m delvewheel repair dist/merged/iknowpy-*.whl --add-path "$ICUDIR/bin64;../../kit/x64/Release/bin"
+"$PYTHON" -m delvewheel repair dist/merged/iknowpy-*.whl --add-path "$ICUDIR/bin64;../../kit/x64/Release/bin" --no-mangle-all
 
 
 ##### Report cache statistics #####

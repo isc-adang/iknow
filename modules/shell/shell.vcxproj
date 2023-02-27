@@ -78,7 +78,7 @@
       <AdditionalIncludeDirectories>..\..\build\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iKnowCore.lib;iKnowBase.lib;iKnowModelDe.lib;iKnowModelEn.lib;iKnowModelEs.lib;iKnowModelFr.lib;iKnowModelNl.lib;iKnowModelPt.lib;iKnowModelRu.lib;iKnowModelJa.lib;iKnowModelUk.lib;iKnowModelSv.lib;iKnowModelCs.lib;iKnowModelDex.lib;iKnowModelEnx.lib;iKnowModelEsx.lib;iKnowModelFrx.lib;iKnowModelNlx.lib;iKnowModelPtx.lib;iKnowModelRux.lib;iKnowModelJax.lib;iKnowModelUkx.lib;iKnowModelSvx.lib;iKnowModelCsx.lib;iKnowModelCommon.lib;iKnowALI.lib;icuuc.lib;icuin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iKnowCore.lib;iKnowBase.lib;iKnowModelDe.lib;iKnowModelEn.lib;iKnowModelEs.lib;iKnowModelFr.lib;iKnowModelNl.lib;iKnowModelPt.lib;iKnowModelRu.lib;iKnowModelJa.lib;iKnowModelUk.lib;iKnowModelSv.lib;iKnowModelCs.lib;iKnowModelDex.lib;iKnowModelEnx.lib;iKnowModelEsx.lib;iKnowModelFrx.lib;iKnowModelNlx.lib;iKnowModelPtx.lib;iKnowModelRux.lib;iKnowModelJax.lib;iKnowModelUkx.lib;iKnowModelSvx.lib;iKnowModelCsx.lib;iKnowModelCommon.lib;iKnowALI.lib;icuuc.lib;icuin.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -87,6 +87,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
+      <DelayLoadDLLs>iKnowModelDe.dll;iKnowModelEn.dll;iKnowModelEs.dll;iKnowModelFr.dll;iKnowModelNl.dll;iKnowModelPt.dll;iKnowModelRu.dll;iKnowModelJa.dll;iKnowModelUk.dll;iKnowModelSv.dll;iKnowModelCs.dll;iKnowModelDex.dll;iKnowModelEnx.dll;iKnowModelEsx.dll;iKnowModelFrx.dll;iKnowModelNlx.dll;iKnowModelPtx.dll;iKnowModelRux.dll;iKnowModelJax.dll;iKnowModelUkx.dll;iKnowModelSvx.dll;iKnowModelCsx.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -110,7 +111,7 @@
       <AdditionalIncludeDirectories>..\..\build\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iKnowCore.lib;iKnowBase.lib;iKnowModelDe.lib;iKnowModelEn.lib;iKnowModelEs.lib;iKnowModelFr.lib;iKnowModelNl.lib;iKnowModelPt.lib;iKnowModelRu.lib;iKnowModelJa.lib;iKnowModelUk.lib;iKnowModelSv.lib;iKnowModelCs.lib;iKnowModelDex.lib;iKnowModelEnx.lib;iKnowModelEsx.lib;iKnowModelFrx.lib;iKnowModelNlx.lib;iKnowModelPtx.lib;iKnowModelRux.lib;iKnowModelJax.lib;iKnowModelUkx.lib;iKnowModelSvx.lib;iKnowModelCsx.lib;iKnowModelCommon.lib;iKnowALI.lib;icuuc.lib;icuin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iKnowCore.lib;iKnowBase.lib;iKnowModelDe.lib;iKnowModelEn.lib;iKnowModelEs.lib;iKnowModelFr.lib;iKnowModelNl.lib;iKnowModelPt.lib;iKnowModelRu.lib;iKnowModelJa.lib;iKnowModelUk.lib;iKnowModelSv.lib;iKnowModelCs.lib;iKnowModelDex.lib;iKnowModelEnx.lib;iKnowModelEsx.lib;iKnowModelFrx.lib;iKnowModelNlx.lib;iKnowModelPtx.lib;iKnowModelRux.lib;iKnowModelJax.lib;iKnowModelUkx.lib;iKnowModelSvx.lib;iKnowModelCsx.lib;iKnowModelCommon.lib;iKnowALI.lib;icuuc.lib;icuin.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Version>1.1</Version>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -120,9 +121,11 @@
       </DataExecutionPrevention>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
+      <DelayLoadDLLs>iKnowModelDe.dll;iKnowModelEn.dll;iKnowModelEs.dll;iKnowModelFr.dll;iKnowModelNl.dll;iKnowModelPt.dll;iKnowModelRu.dll;iKnowModelJa.dll;iKnowModelUk.dll;iKnowModelSv.dll;iKnowModelCs.dll;iKnowModelDex.dll;iKnowModelEnx.dll;iKnowModelEsx.dll;iKnowModelFrx.dll;iKnowModelNlx.dll;iKnowModelPtx.dll;iKnowModelRux.dll;iKnowModelJax.dll;iKnowModelUkx.dll;iKnowModelSvx.dll;iKnowModelCsx.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="delayhook.c" />
     <ClCompile Include="src\CompiledKnowledgebase.cpp" />
     <ClCompile Include="src\CompiledLanguagebase.cpp" />
     <ClCompile Include="src\OffsetPtr.cpp" />

@@ -48,7 +48,7 @@ for PYVERSION in $PYVERSIONS; do
   "$PYTHON" -m pip install -U setuptools wheel --no-warn-script-location
   "$PYTHON" -m pip install -U cython=="$CYTHON_VERSION" pefile machomachomangler --no-warn-script-location
 done
-"$PYTHON" -m pip install -U delvewheel
+"$PYTHON" -m pip install -U delvewheel==1.3.2
 
 # JSON for Modern C++
 if ! [ -f "$JSONDIR/iknow_json_url.txt" ] || [ $(cat "$JSONDIR/iknow_json_url.txt") != "$JSON_URL" ]; then

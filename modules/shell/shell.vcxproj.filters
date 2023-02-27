@@ -33,6 +33,9 @@
     <ClCompile Include="src\CompiledLanguagebase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="delayhook.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CompiledKnowledgebase.h">
