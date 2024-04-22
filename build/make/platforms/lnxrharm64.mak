@@ -5,8 +5,8 @@
 MKDIR = test -e $(dir $@) || mkdir -p $(dir $@)
 DELETE = rm -f
 
-# Compile C++ code as C++11
-CPPLANGFLAG=-std=c++11
+# Compile C++ code as C++17
+CPPLANGFLAG=-std=c++17
 
 
 ###Stage 1: Source->Objects

@@ -704,7 +704,7 @@ else:
         enginelibs_name_pattern = 'libiknow*.dylib'
         os.environ['CC'] = 'clang++'  # workaround to force setuptools to invoke C++ compiler
         os.environ['CXX'] = 'clang++'
-        extra_compile_args = ['-std=c++11']
+        extra_compile_args = ['-std=c++17']
         if sys.version_info[:2] == (3, 8):
             # workaround for https://github.com/cython/cython/issues/3474
             extra_compile_args.append('-Wno-deprecated-declarations')

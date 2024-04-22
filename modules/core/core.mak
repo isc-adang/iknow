@@ -4,7 +4,7 @@ ROOT_DIR = $(realpath $(MAKEPATH)/../..)
 #TODO: TRW - generalize!
 PLATFORM = $(IKNOWPLAT)
 
-CPP_LANGUAGE = 14
+CPP_LANGUAGE = 17
 
 STRICT = 1
 

@@ -12,7 +12,7 @@ HEADERINCLUDEFLAG = -I
 OBJECTOUTPUTFLAG = -o
 OBJECTSUFFIX = .o
 LIBFLAGS = -fPIC
-OBJECTFLAGS += -c -O2 -DBIT64PLAT -DSIZEOF_LONG=8 -std=c++11 -Wno-deprecated-declarations -Wno-non-template-friend -DLINUX -DUNIX $(if $(CREATELIBRARY),$(LIBFLAGS))
+OBJECTFLAGS += -c -O2 -DBIT64PLAT -DSIZEOF_LONG=8 -std=c++17 -Wno-deprecated-declarations -Wno-non-template-friend -DLINUX -DUNIX $(if $(CREATELIBRARY),$(LIBFLAGS))
 
 ###Stage 2a: Objects->Library
 ifeq ($(USE_LIBRARIAN_LD),1)

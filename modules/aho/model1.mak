@@ -10,7 +10,7 @@ PLATFORM = $(IKNOWPLAT)
 
 STRICT = 1
 
-CPP_LANGUAGE = 14
+CPP_LANGUAGE = 17
 
 INCLUDEDIRS = ./inl/$(IKNOWMODELLANG)_regex ./lexrep ./ali . ../base/src/headers ../ali ../core/src/headers \
 	 $(ROOT_DIR)/shared/System/unix $(ROOT_DIR)/shared/System $(ROOT_DIR)/shared/Utility $(ICUDIR)/include $(ROOT_DIR)/kernel/common/h

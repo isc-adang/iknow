@@ -4,7 +4,7 @@ ROOT_DIR = $(realpath $(MAKEPATH)/../../..)
 #TODO: TRW - generalize!
 PLATFORM = $(IKNOWPLAT)
 
-CPP_LANGUAGE = 14
+CPP_LANGUAGE = 17
 
 INCLUDEDIRS = $(ROOT_DIR)/modules/shell/src $(ROOT_DIR)/modules/shell/src/SDK/headers $(ROOT_DIR)/modules/base/src/headers $(ROOT_DIR)/modules/core/src/headers $(ROOT_DIR)/shared/System/unix $(ROOT_DIR)/shared/System $(ROOT_DIR)/shared/Utility $(ROOT_DIR)/kernel/common/h $(ICUDIR)/include
 

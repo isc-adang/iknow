@@ -7,7 +7,7 @@ DELETE = rm -f
 
 #CLANG_MODE = 1
 STDLIB=libc++
-CPPLANGFLAG=-std=c++11 -Wno-non-template-friend
+CPPLANGFLAG=-std=c++17 -Wno-non-template-friend
 
 ###Stage 1: Source->Objects
 ifeq ($(CLANG_MODE),1)

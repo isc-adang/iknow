@@ -6,7 +6,7 @@ PLATFORM = $(IKNOWPLAT)
 
 STRICT = 1
 
-CPP_LANGUAGE = 14
+CPP_LANGUAGE = 17
 
 INCLUDEDIRS = $(ROOT_DIR)/modules/base/src/headers $(ICUDIR)/include $(ROOT_DIR)/shared/System/unix $(ROOT_DIR)/shared/System $(ROOT_DIR)/shared/Utility $(ROOT_DIR)/kernel/common/h
 
