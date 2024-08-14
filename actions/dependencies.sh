@@ -10,9 +10,9 @@ set -euxo pipefail
 # in actions/updatelib.py.
 
 # START DEPENDENCY-AUTOUPDATE SECTION
-ICU_NAME="ICU 74.2"
-ICU_URL_WIN=https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-Win64-MSVC2019.zip
-ICU_URL_SRC=https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.tgz
+ICU_NAME="ICU 75.1"
+ICU_URL_WIN=https://github.com/unicode-org/icu/releases/download/release-75-1/icu4c-75_1-Win64-MSVC2022.zip
+ICU_URL_SRC=https://github.com/unicode-org/icu/releases/download/release-75-1/icu4c-75_1-src.tgz
 JSON_VERSION=3.11.3
 JSON_URL=https://github.com/nlohmann/json/releases/download/v3.11.3/include.zip
 PYVERSIONS_WIN="3.8.10 3.9.13 3.10.11 3.11.9 3.12.5"
